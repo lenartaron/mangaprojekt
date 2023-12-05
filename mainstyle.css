@@ -11,3 +11,121 @@ main {
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
+
+/*Gépi nézet*/
+@media (min-width: 1025px) {
+
+    /*body*/
+    body {
+        margin: 0;
+        padding: 0;
+        background-image: url('img/hatternagy.png');
+        background-size: cover;
+        background-repeat: round;
+        background-attachment: fixed;
+        font-family: Arial, sans-serif;
+    }
+
+    /*telefonos nézet*/
+    #android {
+        display: none;
+    }
+
+    /*gépi nézet*/
+    #pc {
+        display: visible;
+    }
+
+    /*header*/
+    header {
+        background-image: linear-gradient(to bottom right, #7b4f9b, #7a4f99);
+        color: #fff;
+    }
+
+    /*headerben lévő kép*/
+
+    header>img#allium {
+        background: radial-gradient(#7b4f9b, #7a4f99);
+        border-radius: 50%;
+        width: 4%;
+        height: 4%;
+        margin: 10px 0px 0px 10px;
+    }
+
+    /*headerben lévő cím*/
+    header>#cím {
+        display: inline-block;
+        margin: 1px 10px 0% 5px;
+        font-size: 230%;
+        text-shadow: 2px 2px 6px #5d3e76;
+
+    }
+
+    /*menü*/
+    .custom-menu {
+        background-color: #333;
+        color: #fff;
+        border-radius: 5px;
+        padding: 10px;
+    }
+
+    /*menüben lévő link*/
+    .custom-menu a {
+        color: #fff;
+        text-decoration: none;
+        display: block;
+        padding: 5px 0;
+        transition: background-color 0.3s;
+    }
+
+    /*menüben lévő link hover animációs*/
+    .custom-menu a:hover {
+        background-color: #555;
+    }
+
+    /*menü elhelyezkedés (sorok felbontása)*/
+    menu,
+    ul {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        width: 30%;
+        margin-top: 0px;
+    }
+
+
+    /*menüben elhelyezkedés (egymás mellett)*/
+    li {
+        flex-grow: 1;
+        border-right: 1px solid black;
+    }
+
+    /*gomb*/
+    button {
+        border: none;
+        border-left-style: none;
+        background: linear-gradient(#5f3277, #8b5aaf);
+        width: 100%;
+        padding: 4px;
+        text-shadow: 2px 2px 6px #5d3e76;
+    }
+
+    /*gomb hover animáció*/
+    button:hover {
+        background: linear-gradient(#8b5aaf, #5f3277);
+    }
+
+    /*elválasztó vonal (a gombok felet)*/
+    #sor {
+        border-top: 1px solid black;
+        margin-top: 16px;
+    }
+
+    /*gombok közös beállítása*/
+    #gomb {
+        text-decoration: none;
+        color: white;
+    }
+
+
+}
