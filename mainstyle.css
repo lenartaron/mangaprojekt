@@ -129,3 +129,96 @@ main {
 
 
 }
+
+/*kisebb tablet, telefon, böngészőablakok*/
+@media (max-width: 768px) {
+
+    /*telefonos nézet*/
+    #pc {
+        display: none;
+    }
+
+    /*gépi nézet*/
+    #android {
+        display: visible;
+    }
+
+    /*header*/
+    header {
+        background-color: #8b5aaf;
+        color: #fff;
+        padding: 20px;
+    }
+
+    /*headerben lévő kép*/
+    header>img#allium {
+        background: radial-gradient(#8b4aaf, #8b5aaf);
+        border-radius: 50%;
+        width: 12%;
+        height: 12%;
+    }
+
+    /*headerben lévő szöveg(cím)*/
+    header>#cím {
+        display: inline-block;
+        margin: 1px 10px 0px 3px;
+        font-size: 200%;
+        text-shadow: 2px 2px 6px #5d3e76;
+    }
+
+    /*menü*/
+    .custom-menu {
+        background-color: #333;
+        color: #fff;
+        border-radius: 5px;
+        padding: 10px;
+    }
+
+    /*menüben lévő link*/
+    .custom-menu a {
+        color: #fff;
+        text-decoration: none;
+        display: block;
+        padding: 5px 0;
+        transition: background-color 0.3s;
+    }
+
+    /*menüben lévő link hover animáció*/
+    .custom-menu a:hover {
+        background-color: #555;
+    }
+
+    /*menüben elhelyezkedés*/
+    li {
+        flex-grow: 1;
+        border-right: 1px solid black;
+    }
+
+    /*gomb*/
+    button {
+        border: none;
+        border-left-style: none;
+        background: linear-gradient(#5f3277, #8b5aaf);
+        width: 100%;
+        padding: 4px;
+
+        text-shadow: 2px 2px 6px #5d3e76;
+    }
+
+    /*gomb hover animáció*/
+    button:hover {
+        background: linear-gradient(#8b5aaf, #5f3277);
+    }
+
+    /*elválasztó vonal (a gombok felet)*/
+    #sor {
+        border-top: 1px solid black;
+        margin-top: 16px;
+    }
+
+    /*gombok közös beállítása*/
+    #gomb {
+        text-decoration: none;
+        color: white;
+    }
+}
