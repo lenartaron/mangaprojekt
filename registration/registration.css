@@ -13,10 +13,37 @@ h1 {
 
     /*body*/
     body {
+        margin: 0;
+        padding: 0;
         background-image: url(https://www.geeklawblog.com/wp-content/uploads/sites/528/2018/12/liprofile-656x369.png);
         background-repeat: no-repeat;
         background-size: cover;
     }
+
+        /*header*/
+        header {
+            background-image: linear-gradient(to bottom right, #7b4f9b99, #7a4f9999);
+            color: #fff;
+        }
+    
+        /*headerben lévő kép*/
+    
+        header>img#allium {
+            background: radial-gradient(#7b4f9b0c, #7a4f990c);
+            border-radius: 50%;
+            width: 4%;
+            height: 4%;
+            margin: 10px 0px 0px 10px;
+        }
+    
+        /*headerben lévő cím*/
+        header>#cím {
+            display: inline-block;
+            margin: 1px 10px 0% 5px;
+            font-size: 230%;
+            text-shadow: 2px 2px 6px #5d3e76;
+    
+        }
 
     /*középre helyezés*/
     .container {
