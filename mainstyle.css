@@ -61,28 +61,6 @@ main {
 
     }
 
-    /*menü*/
-    .custom-menu {
-        background-color: #333;
-        color: #fff;
-        border-radius: 5px;
-        padding: 10px;
-    }
-
-    /*menüben lévő link*/
-    .custom-menu a {
-        color: #fff;
-        text-decoration: none;
-        display: block;
-        padding: 5px 0;
-        transition: background-color 0.3s;
-    }
-
-    /*menüben lévő link hover animációs*/
-    .custom-menu a:hover {
-        background-color: #555;
-    }
-
     /*menü elhelyezkedés (sorok felbontása)*/
     menu,
     ul {
