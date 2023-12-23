@@ -20,30 +20,29 @@ h1 {
         background-size: cover;
     }
 
-        /*header*/
-        header {
-            background-image: linear-gradient(to bottom right, #7b4f9b99, #7a4f9999);
-            color: #fff;
-        }
-    
-        /*headerben lévő kép*/
-    
-        header>img#allium {
-            background: radial-gradient(#7b4f9b0c, #7a4f990c);
-            border-radius: 50%;
-            width: 4%;
-            height: 4%;
-            margin: 10px 0px 0px 10px;
-        }
-    
-        /*headerben lévő cím*/
-        header>#cím {
-            display: inline-block;
-            margin: 1px 10px 0% 5px;
-            font-size: 230%;
-            text-shadow: 2px 2px 6px #5d3e76;
-    
-        }
+    /*header*/
+    header {
+        background-image: linear-gradient(to bottom right, #7b4f9b99, #7a4f9999);
+        color: #fff;
+    }
+
+    /*headerben lévő kép*/
+    header>a>img {
+        background: radial-gradient(#7b4f9b0c, #7a4f990c);
+        border-radius: 50%;
+        width: 4%;
+        height: 4%;
+        margin: 10px 0px 0px 10px;
+    }
+
+    /*headerben lévő cím*/
+    header>#cím {
+        display: inline-block;
+        margin: 1px 10px 0% 5px;
+        font-size: 230%;
+        text-shadow: 2px 2px 6px #5d3e76;
+
+    }
 
     /*középre helyezés*/
     .container {
@@ -117,6 +116,16 @@ h1 {
         border-radius: 3px;
         padding: 0;
         border: 0;
+    }
+
+    footer{
+        background-color: #000000;
+        border: 2px solid #3D2C3E;
+        height: 20vh;
+    }
+
+    footer>h1{
+        color: white;
     }
 }
 
