@@ -119,13 +119,24 @@ h1 {
     }
 
     footer{
+        position: relative;
+        display: flex;
         background-color: #000000;
         border: 2px solid #3D2C3E;
-        height: 20vh;
+        height: 200px;
     }
 
     footer>h1{
         color: white;
+        align-self: left;
+        margin-left: 50px;
+    }
+    footer>ul>li>a>img{
+        width: 65px;
+        height: 65px;
+        justify-content: left;
+        margin-top: 50px;
+        margin-left: -290px;
     }
 }
 
