@@ -6,10 +6,11 @@ main {
 
 /*tartalom külső része*/
 .manga-container {
-    background-color: #fff;
+    background-color: #3D2C3E;
     border-radius: 5px;
     padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.531);
+    color: white;
 }
 
 /*Gépi nézet*/
@@ -19,7 +20,7 @@ main {
     body {
         margin: 0;
         padding: 0;
-        background-image: url('img/hatternagy.png');
+        background-image: url('img/hatternagyblur.png');
         background-size: cover;
         background-repeat: round;
         background-attachment: fixed;
@@ -105,6 +106,21 @@ main {
         color: white;
     }
 
+    .manga-container>.felkapottak{
+        display: block;
+    }
+
+    .manga-container>.felkapottak>.right, .manga-container>.felkapottak>.left{
+        display: inline-block;
+        color: rgb(0, 0, 0);
+    }
+
+    .manga-container>
+
+    .manga-container>.felkapottak>a>img{
+        height: 320px;
+        padding: 20px;
+    }
 
 }
 
