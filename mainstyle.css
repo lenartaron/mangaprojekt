@@ -1,3 +1,4 @@
+/*------------------------mindenre vonatkozik------------------------*/
 
 /*tartalom*/
 main {
@@ -12,6 +13,8 @@ main {
     box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.531);
     color: white;
 }
+
+/*------------------------responsive------------------------*/
 
 /*Gépi nézet*/
 @media (min-width: 1025px) {
@@ -63,8 +66,7 @@ main {
     }
 
     /*menü elhelyezkedés (sorok felbontása)*/
-    menu,
-    ul {
+    header>ul {
         display: flex;
         list-style: none;
         padding: 0;
@@ -74,7 +76,7 @@ main {
 
 
     /*menüben elhelyezkedés (egymás mellett)*/
-    li {
+    header>ul>li {
         flex-grow: 1;
         border-right: 1px solid black;
     }
@@ -106,17 +108,37 @@ main {
         color: white;
     }
 
-    .manga-container>.felkapottak{
-        display: block;
+    /*menü elhelyezkedés (sorok felbontása)*/
+    .manga-container>.felkapottak>ul {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        width: 30%;
+        margin-top: 0px;
     }
 
-    .manga-container>.felkapottak>.right, .manga-container>.felkapottak>.left{
-        display: inline-block;
-        color: rgb(0, 0, 0);
+
+    /*menüben elhelyezkedés (egymás mellett)*/
+    .manga-container>.felkapottak>li {
+        flex-grow: 0;
     }
 
-    .manga-container>.felkapottak>a>img{
-        height: 320px;
+    /*nyilak*/
+    .manga-container>.felkapottak>ul>li>h1 {
+        width: 100%;
+        color: black;
+    }
+
+    /*bal nyíl*/
+    .manga-container>.felkapottak>ul>li>#left {
+        padding-left: 20px;
+    }
+
+    /*képek*/
+    .manga-container>.felkapottak>ul>li>a>img {
+        width: 250px;
+        padding: 40px;
+        height: 100%;
         padding: 20px;
     }
 
