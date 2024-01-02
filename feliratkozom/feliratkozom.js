@@ -25,6 +25,13 @@ document.getElementById("registration-form").addEventListener("submit", function
             // Bejelentkezés sikeres
             var user = userCredential.user;
             console.log("Sikeres bejelentkezés:", user);
+            user.sendEmailVerification().then(function() {
+                // Verifikációs email elküldve
+                console.log("Verification email sent!");
+              }).catch(function(error) {
+                // Valami hiba volt az email küldés során
+                console.error("Error sending verification email: ", error);
+              });
         })
         .catch(function (error) {
             // Hiba történt
