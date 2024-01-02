@@ -13,30 +13,38 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
+const verifyEmailBtn = document.getElementById('verifyEmailBtn');
 
-document.getElementById("registration-form").addEventListener("submit", function (event) {
-    event.preventDefault();
-    var email = document.getElementById("email").value;
-    var password = document.getElementById("password").value;
+const signupForm = document.getElementById('signupForm');
+const signupBtn = document.getElementById('signupBtn');
 
-    // Bejelentkezés
-    signInWithEmailAndPassword(auth, email, password)
-        .then(function (userCredential) {
-            // Bejelentkezés sikeres
-            var user = userCredential.user;
-            console.log("Sikeres bejelentkezés:", user);
-            user.sendEmailVerification().then(function() {
-                // Verifikációs email elküldve
-                console.log("Verification email sent!");
-              }).catch(function(error) {
-                // Valami hiba volt az email küldés során
-                console.error("Error sending verification email: ", error);
-              });
-        })
-        .catch(function (error) {
-            // Hiba történt
-            var errorCode = error.code;
-            var errorMessage = error.message;
-            console.error("Bejelentkezési hiba:", errorCode, errorMessage);
-        });
-})
+// Submit event listener
+signupForm.addEventListener('submit', function(event) {
+  event.preventDefault(); // Prevent the form from submitting
+
+  const usernme = document.getElementById('usernme').value;
+  const email = document.getElementById('email').value;
+
+  // Új user email és felhasználónév
+  firebase.auth().createUserWithEmailAndPassword(email, usernme)
+    .then((userCredential) => {
+      // Beléptél
+      const user = userCredential.user;
+
+      // Email küldés
+      user.sendEmailVerification().then(function() {
+        // Email küldve.
+        console.log("Verification email sent!");
+        alert("Account created! Verification email sent. Please check your inbox.");
+      }).catch(function(error) {
+        // Valami baj lenni
+        console.error("Error sending verification email: ", error);
+        alert("Error sending verification email. Please try again.");
+      });
+
+    })
+    .catch((error) => {
+      console.error("Error creating account: ", error);
+      alert("Error creating account. Please try again.");
+    });
+});
