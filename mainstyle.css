@@ -5,6 +5,7 @@ main {
     padding: 20px;
 }
 
+
 /*tartalom külső része*/
 .manga-container {
     background-color: #3D2C3E;
@@ -13,6 +14,84 @@ main {
     box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.531);
     color: white;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.album{
+    display: flex;
+    max-width: 1200px;
+    position: relative;
+  }
+  .album i{
+    top: 50%;
+    height: 44px;
+    width: 44px;
+    color: #343F4F;
+    cursor: pointer;
+    font-size: 1.15rem;
+    position: absolute;
+    text-align: center;
+    line-height: 44px;
+    background: #fff;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.1s linear;
+  }
+  .album i:active{
+    transform: translateY(-50%) scale(0.9);
+  }
+  .album i:hover{
+    background: #f2f2f2;
+  }
+  .album i:first-child{
+    left: -22px;
+    display: none;
+  }
+  .album i:last-child{
+    right: -22px;
+  }
+  .album .kepek{
+    font-size: 0px;
+    cursor: pointer;
+    overflow: hidden;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+  }
+
+.kepek.dragging{
+  cursor: grab;
+  scroll-behavior: auto;
+}
+.kepek.dragging img{
+  pointer-events: none;
+}
+.kepek img{
+  height: 340px;
+  object-fit: cover;
+  user-select: none;
+  margin-left: 14px;
+  width: calc(100% / 3);
+}
+.kepek img:first-child{
+  margin-left: 0px;
+}
+@media screen and (max-width: 900px) {
+  .kepek img{
+    width: calc(100% / 2);
+  }
+}
+@media screen and (max-width: 550px) {
+  .kepek img{
+    width: 100%;
+  }
+}
+
 
 /*------------------------responsive------------------------*/
 
