@@ -3,80 +3,43 @@
 /*tartalom*/
 main {
     padding: 20px;
-}
-
-#pc>header>ul {
+}body{
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    min-height: 100vh; /* Minimum magasság: a lap teljes magassága */
+    margin: 0;
 }
 
-#pc>header>ul>li {
-    margin-left: auto; /* Pushes the search bar to the right */
-}
-
-#search-bar {
-    display: flex;
-    align-items: center;
-}
-
-#search-bar form {
-    display: flex;
-    align-items: center;
-}
-
-#search-bar input[type="text"] {
-    padding: 6px;
-    margin-right: 6px;
-    /* Add other styles as needed */
-}
 
 /*tartalom külső része*/
 .manga-container {
     background-color: #3D2C3E;
     border-radius: 5px;
-    padding: 20px;
+    padding: 20px 60px;
     box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.531);
     color: white;
 }
 
-.search-container{
-    margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 10vh;
-}
-
-.search-container>form {
-    max-width: 100%; 
-    max-height: 100%; 
-}
-
-.search-container>form>li>input {
-    width: 200%; 
-    height: auto; 
-    display: block;
-    
-}
-
-
-
+/*Betűtípus importálása: A 'Poppins' betűtípus stílusának importálása a Google Fonts-ból*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
-.pc>header>ul{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+
+/* Fejléc stílusok a navigációs menühöz*/
+.pc > header > ul {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
-
-
-
-.album{
+ 
+/* Album konténer stílusok*/
+.album {
     display: flex;
-    max-width: 1200px;
+    max-width: 1800px;
     position: relative;
-  }
-  .album i{
+}
+ 
+/* Ikonsorozat stílusok az album konténeren belül*/
+.album i {
     top: 50%;
     height: 44px;
     width: 44px;
@@ -90,58 +53,60 @@ main {
     border-radius: 50%;
     transform: translateY(-50%);
     transition: transform 0.1s linear;
-  }
-  .album i:active{
+}
+ 
+ /*Ikonsorozat interakció stílusai aktív állapotokban*/
+.album i:active {
     transform: translateY(-50%) scale(0.9);
-  }
-  .album i:hover{
+}
+ 
+/*Ikonsorozat interakció stílusai hover állapotokban*/
+.album i:hover {
     background: #f2f2f2;
-  }
-  .album i:first-child{
+}
+ 
+/*Stílusok a bal ikonokhoz*/
+.album i:first-child {
     left: -22px;
     display: none;
-  }
-  .album i:last-child{
+}
+ 
+/*Stílusok a jobb ikonokhoz*/
+.album i:last-child {
     right: -22px;
-  }
-  .album .kepek{
+}
+
+  /*Konténer az albumképekhez*/
+.album .kepek {
     font-size: 0px;
     cursor: pointer;
     overflow: hidden;
     white-space: nowrap;
     scroll-behavior: smooth;
-  }
-
-.kepek.dragging{
-  cursor: grab;
-  scroll-behavior: auto;
 }
-.kepek.dragging img{
-  pointer-events: none;
+ 
+/* Húzás stílusai az albumképekhez*/
+.kepek.dragging {
+    cursor: grab;
+    scroll-behavior: auto;
 }
-.kepek img{
-  height: 340px;
-  object-fit: cover;
-  user-select: none;
-  margin-left: 14px;
-  width: calc(100% / 5);
+ 
+.kepek.dragging img {
+    pointer-events: none;
 }
-.kepek img:first-child{
-  margin-left: 0px;
-}
-@media screen and (max-width: 900px) {
-  .kepek img{
-    width: calc(100% / 2);
-    height: 500px;
-  }
-}
-@media screen and (max-width: 550px) {
-  .kepek img{
-    width: 100%;
-    height: 300px;
-  }
+ 
+/*Stílusok az albumképekhez*/
+.kepek img {
+    height: 320px;
+    object-fit: cover;
+    user-select: none;
+    margin-left: 14px;
+    width: calc(100% / 7);
 }
 
+.kepek img:first-child {
+    margin-left: 0px;
+}
 
 /*------------------------responsive------------------------*/
 
@@ -194,61 +159,58 @@ main {
 
     }
 
-/*menü elhelyezkedés (sorok felbontása)*/
-header>ul {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    width: 100%;
-    margin-top: 0px;
-  }
+    /*menü elhelyezkedés (sorok felbontása)*/
+    header>ul {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        width: 100%;
+        margin-top: 0px;
+    }
     
-  /*gomb*/
-  button {
-    border: none;
-    border-left-style: none;
-    background: linear-gradient(#5f3277, #8b5aaf);
-    text-shadow: 2px 2px 6px #5d3e76;
-    border-right: 1px solid black;
-    padding: 8px 30px 8px 30px;
-    
-  }
+    /*gomb*/
+    button {
+        border: none;
+        border-left-style: none;
+        background: linear-gradient(#5f3277, #8b5aaf);
+        text-shadow: 2px 2px 6px #5d3e76;
+        border-right: 1px solid black;
+        padding: 8px 30px 8px 30px;   
+    }
   
-  /*gomb hover animáció*/
-  button:hover {
-    background: linear-gradient(#8b5aaf, #5f3277);
-  }
+    /*gomb hover animáció*/
+    button:hover {
+        background: linear-gradient(#8b5aaf, #5f3277);
+    }
   
-  /*elválasztó vonal (a gombok felet)*/
-  #sor {
-    border-top: 1px solid black;
-    margin-top: 16px;
-  }
+    /*elválasztó vonal (a gombok felet)*/
+    #sor {
+        border-top: 1px solid black;
+        margin-top: 16px;
+    }
   
-  /*gombok közös beállítása*/
-  #gomb {
-    text-decoration: none;
-    color: white;
-  }
+    /*gombok közös beállítása*/
+    #gomb {
+        text-decoration: none;
+        color: white;
+    }
   
-  /* Keresőmező stílusai */
-  .search-container {
-    padding-left: 1050px;
-    padding-right: 300px;
-    align-items: right;
-  }
+    /* Keresőmező stílusai */
+    .search-container {
+        padding-left: 1150px;
+        padding-right: 300px;
+        align-items: right;
+    }
   
-  #search-bar {
-    width: 100%; /* Teljes szélességű keresőmező */
-    padding: 4%;
-    margin-right: 10px;
-    border-radius: 100px;
-    border: 1px solid #000;
-    background: #EFDAFF;
-    border-radius: 20px;
-  }
-  
-  
+    #search-bar {
+        width: 250%; /* Teljes szélességű keresőmező */
+        padding: 10%;
+        margin-right: 10px;
+        border-radius: 100px;
+        border: 1px solid #000;
+        background: #EFDAFF;
+        border-radius: 20px;
+    }
 
     /*menü elhelyezkedés (sorok felbontása)*/
     .manga-container>.felkapottak>ul {
@@ -284,6 +246,89 @@ header>ul {
         padding: 20px;
     }
 
+    #right, #left{
+        display: none;
+    }
+
+     /*footer*/
+     footer{
+        position: relative;
+        display: flex;
+        background-color: #000000;
+        border-top: 2px solid #3D2C3E;
+        margin-top: 9%;
+        height: 184px;
+    }
+
+    /*footerben lévő szöveg*/
+    footer>h1{
+        color: white;
+    }
+
+    /*footer (elérhetőségeink felirat)*/
+    footer>#eler {
+        margin-left: 50px;
+    }
+
+    footer>#join {
+        margin-left: 650px;
+    }
+
+    /*ul menu (egymás mellé sorolni az ikonokat)*/
+    menu,
+    ul {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        width: 30%;
+        margin-top: 0px;
+    }
+
+    /*az egymás mellé sorolt ikonok közti hely*/
+    li {
+        flex-grow: 0;
+    }
+
+    /*footerben lévő ikonok*/
+    footer>ul>li>a>img {
+        border:1px solid rgb(40, 40, 40);
+        border-radius: 100%;
+    }
+
+    /*footerben lévő youtube ikon*/
+    footer>ul>li>a>#youtube{
+        width: 65px;
+        height: 65px;
+        align-self: left;
+        margin-top: 70px;
+        margin-left: -380%;
+    }
+
+    /*footerben lévő tiktok ikon*/
+    footer>ul>li>a>#tiktok{
+        width: 65px;
+        height: 65px;
+        justify-content: left;
+        margin-top: 70px;
+        margin-left: -360%;
+    }
+
+    /*footerben lévő discord ikon*/
+    footer>a>#discord{
+        width: 65px;
+        height: 65px;
+        margin-top: 70px;
+        margin-left: -260%;
+    }
+
+}
+
+/*Médialekérdezések a reszponzív dizájnhoz*/
+@media screen and (max-width: 900px) {
+    .kepek img {
+        width: calc(100% / 2);
+        height: 500px;
+    }
 }
 
 /*Tablet, kisebb laptopok, kompakt monitorok*/
@@ -293,7 +338,7 @@ header>ul {
     body {
         margin: 0;
         padding: 0;
-        background-image: url('img/hatter.jpg');
+        background-image: url('img/hatterkicsiblur.png');
         background-size: cover;
         background-repeat: round;
         background-attachment: fixed;
@@ -312,42 +357,25 @@ header>ul {
 
     /*header*/
     header {
-        background-color: #8b5aaf;
+        background-image: linear-gradient(to bottom right, #7b4f9b, #7a4f99);
         color: #fff;
-        padding: 10px;
     }
-
-    /*headerbeli kép mérete és kinézete*/
+        
+    /*headerben lévő kép*/
     header>img#allium {
-        background: radial-gradient(#8b4aaf, #8b5aaf);
+        background: radial-gradient(#7b4f9b0c, #7a4f990c);
         border-radius: 50%;
-        width: 2%;
-        height: 2%;
+        width: 10%;
+        height: 10%;
+        margin: 10px 0px 0px 10px;
     }
-
-    /*headerben lévő szöveg (cím)*/
-    header>#cím {
+        
+    /*headerben lévő cím*/
+   header>#cím {
         display: inline-block;
-        margin: 1px 10px 0px 5px;
-        font-size: 80%;
-        text-shadow: 2px 2px 6px #5d3e76;
-    }
-
-    /*menü*/
-    .custom-menu {
-        background-color: #333;
-        color: #fff;
-        border-radius: 5px;
-        padding: 10px;
-    }
-
-    /*menü lévő link*/
-    .custom-menu a {
-        color: #fff;
-        text-decoration: none;
-        display: block;
-        padding: 5px 0;
-        transition: background-color 0.3s;
+        margin: 1px 10px 0% 5px;
+        font-size: 260%;
+        text-shadow: 2px 2px 6px #5d3e76;   
     }
 
     /*menüben lévő link hover animáció*/
@@ -361,7 +389,7 @@ header>ul {
         display: flex;
         list-style: none;
         padding: 0;
-        width: 30%;
+        width: 100%;
         margin-top: 0px;
     }
 
@@ -373,12 +401,12 @@ header>ul {
 
     /*gomb*/
     button {
+        font-size: large;
         border: none;
         border-left-style: none;
         background: linear-gradient(#5f3277, #8b5aaf);
         width: 100%;
-        padding: 4px;
-
+        padding: 12px;
         text-shadow: 2px 2px 6px #5d3e76;
     }
 
@@ -398,6 +426,99 @@ header>ul {
         text-decoration: none;
         color: white;
     }
+
+    /* Keresőmező stílusai */
+    .search-container {
+        padding-left: 20vh;
+        padding-right: 2vh;
+        align-items: right;
+    }
+  
+    #search-bar {
+        font-size: large;
+        width: 1500%;
+        padding: 100%;
+        margin-right: 10px;
+        border-radius: 100px;
+        border: 1px solid #000;
+        background: #EFDAFF;
+        border-radius: 20px;
+    }
+
+    /*footer*/
+    footer{
+        position: relative;
+        display: flex;
+        background-color: #000000;
+        border-top: 2px solid #3D2C3E;
+        height: 200px;
+        margin-top: auto;
+        padding: 10px;
+    }
+
+    /*footerben lévő szöveg*/
+    footer>h1{
+        color: white;
+    }
+
+    /*footer (elérhetőségeink felirat)*/
+    footer>#eler {
+        margin-left: 20px;
+        font-size: xx-large;
+    }
+
+    footer>#join {
+        margin-left: 160px;
+        font-size: xx-large;
+    }
+
+    /*ul menu (egymás mellé sorolni az ikonokat)*/
+    menu,
+    ul {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        width: 30%;
+        margin-top: 0px;
+    }
+
+    /*az egymás mellé sorolt ikonok közti hely*/
+    li {
+        flex-grow: 0;
+    }
+
+    /*footerben lévő ikonok*/
+    footer>ul>li>a>img {
+        border:2px solid rgb(40, 40, 40);
+        border-radius: 100%;
+    }
+
+    /*footerben lévő youtube ikon*/
+    footer>ul>li>a>#youtube{
+        width: 65px;
+        height: 65px;
+        align-self: left;
+        margin-top: 70px;
+        margin-left: -380%;
+    }
+
+    /*footerben lévő tiktok ikon*/
+    footer>ul>li>a>#tiktok{
+        width: 65px;
+        height: 65px;
+        justify-content: left;
+        margin-top: 70px;
+        margin-left: -360%;
+    }
+
+    /*footerben lévő discord ikon*/
+    footer>a>#discord{
+        width: 65px;
+        height: 65px;
+        margin-top: 70px;
+        margin-left: -260%;
+    }
+
 }
 
 /*kisebb tablet, telefon, böngészőablakok*/
@@ -490,6 +611,14 @@ header>ul {
     #gomb {
         text-decoration: none;
         color: white;
+    }
+}
+
+/*Médialekérdezések a reszponzív dizájnhoz*/
+@media screen and (max-width: 550px) {
+    .kepek img {
+        width: 100%;
+        height: 300px;
     }
 }
 
