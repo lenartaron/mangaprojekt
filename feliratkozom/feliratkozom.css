@@ -491,6 +491,78 @@ h1 {
         padding: 0;
         border: 0;
     }
+
+         /*footer*/
+         footer{
+            position: relative;
+            display: flex;
+            background-color: #000000;
+            border-top: 2px solid #3D2C3E;
+            height: 200px;
+        }
+    
+        /*footerben lévő szöveg*/
+        footer>h1{
+            color: white;
+        }
+    
+        /*footer (elérhetőségeink felirat)*/
+        footer>#eler {
+            margin-left: 20px;
+            font-size: xx-large;
+        }
+    
+        footer>#join {
+            margin-left: 160px;
+            font-size: xx-large;
+        }
+    
+        /*ul menu (egymás mellé sorolni az ikonokat)*/
+        menu,
+        ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            width: 30%;
+            margin-top: 0px;
+        }
+    
+        /*az egymás mellé sorolt ikonok közti hely*/
+        li {
+            flex-grow: 0;
+        }
+    
+        /*footerben lévő ikonok*/
+        footer>ul>li>a>img {
+            border:2px solid rgb(40, 40, 40);
+            border-radius: 100%;
+        }
+    
+        /*footerben lévő youtube ikon*/
+        footer>ul>li>a>#youtube{
+            width: 65px;
+            height: 65px;
+            align-self: left;
+            margin-top: 70px;
+            margin-left: -380%;
+        }
+    
+        /*footerben lévő tiktok ikon*/
+        footer>ul>li>a>#tiktok{
+            width: 65px;
+            height: 65px;
+            justify-content: left;
+            margin-top: 70px;
+            margin-left: -360%;
+        }
+    
+        /*footerben lévő discord ikon*/
+        footer>a>#discord{
+            width: 65px;
+            height: 65px;
+            margin-top: 70px;
+            margin-left: -260%;
+        }
 }
 
 /*telefon*/

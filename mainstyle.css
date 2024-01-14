@@ -524,6 +524,18 @@ main {
 /*kisebb tablet, telefon, böngészőablakok*/
 @media (max-width: 768px) {
 
+    
+    /*body*/
+    body {
+        margin: 0;
+        padding: 0;
+        background-image: url('img/hatterkicsiblur.png');
+        background-size: cover;
+        background-repeat: round;
+        background-attachment: fixed;
+        font-family: Arial, sans-serif;
+    }
+
     /*telefonos nézet*/
     #pc {
         display: none;
@@ -557,49 +569,36 @@ main {
         text-shadow: 2px 2px 6px #5d3e76;
     }
 
-    /*menü*/
-    .custom-menu {
-        background-color: #333;
-        color: #fff;
-        border-radius: 5px;
-        padding: 10px;
-    }
-
-    /*menüben lévő link*/
-    .custom-menu a {
-        color: #fff;
-        text-decoration: none;
-        display: block;
-        padding: 5px 0;
-        transition: background-color 0.3s;
-    }
-
     /*menüben lévő link hover animáció*/
     .custom-menu a:hover {
         background-color: #555;
     }
 
-    /*menüben elhelyezkedés*/
-    li {
-        flex-grow: 1;
-        border-right: 1px solid black;
-    }
+    .menu {
+        background-color: #333;
+        overflow: hidden;
+        padding: 0;
+        margin: 0;
+      }
+      
+      .menu li {
+        float: left;
+        display: inline;
+      }
+      
+      .menu a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+      
+      .menu a:hover {
+        background-color: #555;
+      }
 
-    /*gomb*/
-    button {
-        border: none;
-        border-left-style: none;
-        background: linear-gradient(#5f3277, #8b5aaf);
-        width: 100%;
-        padding: 4px;
 
-        text-shadow: 2px 2px 6px #5d3e76;
-    }
-
-    /*gomb hover animáció*/
-    button:hover {
-        background: linear-gradient(#8b5aaf, #5f3277);
-    }
 
     /*elválasztó vonal (a gombok felet)*/
     #sor {
@@ -607,11 +606,78 @@ main {
         margin-top: 16px;
     }
 
-    /*gombok közös beállítása*/
-    #gomb {
-        text-decoration: none;
-        color: white;
-    }
+
+         /*footer*/
+         footer{
+            position: relative;
+            display: flex;
+            background-color: #000000;
+            border-top: 2px solid #3D2C3E;
+            height: 200px;
+        }
+    
+        /*footerben lévő szöveg*/
+        footer>h1{
+            color: white;
+        }
+    
+        /*footer (elérhetőségeink felirat)*/
+        footer>#eler {
+            margin-left: 20px;
+            font-size: xx-large;
+        }
+    
+        footer>#join {
+            margin-left: 160px;
+            font-size: xx-large;
+        }
+    
+        /*ul menu (egymás mellé sorolni az ikonokat)*/
+        menu,
+        ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            width: 30%;
+            margin-top: 0px;
+        }
+    
+        /*az egymás mellé sorolt ikonok közti hely*/
+        li {
+            flex-grow: 0;
+        }
+    
+        /*footerben lévő ikonok*/
+        footer>ul>li>a>img {
+            border:2px solid rgb(40, 40, 40);
+            border-radius: 100%;
+        }
+    
+        /*footerben lévő youtube ikon*/
+        footer>ul>li>a>#youtube{
+            width: 65px;
+            height: 65px;
+            align-self: left;
+            margin-top: 70px;
+            margin-left: -360%;
+        }
+    
+        /*footerben lévő tiktok ikon*/
+        footer>ul>li>a>#tiktok{
+            width: 65px;
+            height: 65px;
+            justify-content: left;
+            margin-top: 70px;
+            margin-left: -350%;
+        }
+    
+        /*footerben lévő discord ikon*/
+        footer>a>#discord{
+            width: 65px;
+            height: 65px;
+            margin-top: 70px;
+            margin-left: -260%;
+        }
 }
 
 /*Médialekérdezések a reszponzív dizájnhoz*/
